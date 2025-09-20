@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/rubi.jpg" type="image/x-icon">
+    <title>Rubí <3</title>
+</head>
+<body>
+    <div class="greetings">
+
+        <span>T</span>
+        <span>E</span>
+        <span>Q</span>
+        <span>U</span>
+        <span>I</span>
+        <span>E</span>
+        <span>R</span>
+        <span>O</span>
+
+    </div>
+    <div class="greetings">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="description">
+        <span>¡Para Rubí mi niña bonita!</span>
+    </div>
+    <div class="button">
+        <button>
+            <a href="FLORES.html">Haz clic aquí</a>
+        </button>
+        <br>
+    </div>
+    <span>No te quedaras sin tus flores amarillas "<3"</span>
+    <div class="texto"><p>Los mejores "</p><p class="contador" id="diasContador">0</p><p>" días que han pasado desde que me respondiste por primera vez</p></div>
+    <!-- <div class="contador" id="diasContador">0</div> -->
+<script>
+    function actualizarContadorAnimado() {
+      const fechaInicio = new Date("2025-07-16");
+      const fechaHoy = new Date();
+
+      const diferencia = fechaHoy - fechaInicio;
+      const diasTotales = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+      let contador = 0;
+      const duracion = 2000; // duración animación en ms
+      const intervalo = 20; // intervalo de actualización en ms
+      const incremento = Math.ceil(diasTotales / (duracion / intervalo));
+
+      const animar = setInterval(() => {
+        contador += incremento;
+        if (contador >= diasTotales) {
+          contador = diasTotales;
+          clearInterval(animar);
+        }
+        document.getElementById("diasContador").textContent = contador;
+      }, intervalo);
+    }
+
+    // Ejecutar animación al cargar la página
+    actualizarContadorAnimado();
+</script>
+
+</body>
+</html>
