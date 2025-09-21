@@ -107,4 +107,8 @@ body{
     color: #ff4d4d;
     text-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
   }
+
+  button{
+    color: white;
+  }
   
